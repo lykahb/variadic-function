@@ -1,0 +1,51 @@
+name:                variadic-function
+version:             0.1.0.0
+github:              "lykahb/variadic-function"
+license:             BSD3
+author:              "Boris Lykah"
+maintainer:          "lykahb@gmail.com"
+copyright:           "2021 Boris Lykah"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis:            Create and transform functions with variable arity.
+category:            Data, Functions
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/lykahb/variadic-function#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+default-extensions:
+- ConstraintKinds
+- DataKinds
+- FlexibleContexts
+- FlexibleInstances
+- MultiParamTypeClasses
+- PolyKinds
+- RankNTypes
+- TypeFamilies
+- TypeOperators
+- UndecidableInstances
+- UndecidableSuperClasses
+
+library:
+  source-dirs: src
+
+tests:
+  variadic-function-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hspec
+    - variadic-function
