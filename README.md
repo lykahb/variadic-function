@@ -32,6 +32,7 @@ composeN f = transformFunction
   (\_ r -> f r)
   -- Composition does not use the accumulator either, so it is ()
   ()
+```
 
 Here is a more complex example that constrains arguments and uses the accumulator:
 
