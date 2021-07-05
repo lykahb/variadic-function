@@ -1,5 +1,9 @@
 # Changelog for variadic-function
 
+## Changes in 0.1.0.2
+
+- Improve test coverage
+
 ## Changes in 0.1.0.1
 
 - Fix markup in README
